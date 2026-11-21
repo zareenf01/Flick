@@ -4,10 +4,6 @@ Flick turns a link to your web app into a product walkthrough. You paste a URL a
 
 One run gives you three things: an interactive demo people can click through, an MP4 video, and a written step-by-step guide.
 
-## Status
-
-Early development. The landing page and the app screens are built as UI; accounts, recording and exports come next.
-
 ## Layout
 
 ```
