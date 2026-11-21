@@ -6,7 +6,7 @@ import { env } from "./env.js";
 import { log } from "./log.js";
 
 const server = serve({ fetch: app.fetch, port: env.PORT }, (info) => {
-  log.info({ port: info.port }, "backend ready");
+  log.info({ port: info.port }, "server ready");
 });
 
 let stopping = false;
@@ -14,7 +14,7 @@ let stopping = false;
 function stop(signal: string) {
   if (stopping) return;
   stopping = true;
-  log.info({ signal }, "backend stopping");
+  log.info({ signal }, "server stopping");
   server.close(() => {
     void pool.end().then(() => process.exit(0));
   });

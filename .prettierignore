@@ -4,4 +4,4 @@ AGENTS.md
 next-env.d.ts
 dist
 storage
-backend/drizzle/meta
+server/drizzle/meta

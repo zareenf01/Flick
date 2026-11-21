@@ -2,7 +2,7 @@ import path from "node:path";
 import type { NextConfig } from "next";
 
 const root = path.join(import.meta.dirname, "..");
-const backendUrl = process.env.BACKEND_URL ?? "http://localhost:4000";
+const serverUrl = process.env.SERVER_URL ?? "http://localhost:4000";
 
 const nextConfig: NextConfig = {
   cacheComponents: true,
@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
     root,
   },
   async rewrites() {
-    return [{ source: "/api/:path*", destination: `${backendUrl}/api/:path*` }];
+    return [{ source: "/api/:path*", destination: `${serverUrl}/api/:path*` }];
   },
 };
 
