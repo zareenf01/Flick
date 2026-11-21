@@ -1,0 +1,7 @@
+package-lock.json
+AGENTS.md
+.next
+next-env.d.ts
+dist
+storage
+backend/drizzle/meta

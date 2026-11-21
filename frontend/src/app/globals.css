@@ -1,0 +1,66 @@
+@import "tailwindcss";
+@import "lenis/dist/lenis.css";
+
+:root {
+  --paper: #ffffff;
+  --canvas: #f6f6f4;
+  --ink: #0b0b0f;
+  --muted: #676a73;
+  --rule: #ebebea;
+  --signal: #f2542d;
+  --focus: #2f5bff;
+  --cobalt: #2f5bff;
+  --lime: #d2f45b;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-canvas: var(--canvas);
+  --color-cobalt: var(--cobalt);
+  --color-lime: var(--lime);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
+  --color-signal: var(--signal);
+  --color-focus: var(--focus);
+  --font-sans: var(--font-manrope);
+  --font-display: var(--font-manrope);
+  --font-mono: var(--font-jetbrains);
+  --ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(242, 84, 45, 0.18);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
